@@ -1,7 +1,7 @@
-
-var rem = {
-  load: function () {
-     !(function(e, t) {
+/* eslint-disable*/
+export default {
+    load:function(){
+        ! function(e, t) {
             function i() {
                 var t = n.getBoundingClientRect().width;
                 t / m > 750 && (t = 750 * m);
@@ -50,8 +50,6 @@ var rem = {
                 var t = parseFloat(e) / this.rem;
                 return "string" == typeof e && e.match(/px$/) && (t += "rem"), t
             }
-        }(window, window.lib || (window.lib = {})));
-   }
+        }(window, window.lib || (window.lib = {}));
+    }
 }
-
-module.exports = rem; //抛出去rem

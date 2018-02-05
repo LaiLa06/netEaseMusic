@@ -10,13 +10,6 @@ export default {
 }
 </script>
 
-<style scoped lang="less">
-@import "./common/less/index.less";
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  background-color: @bg-gery;
-}
+<style lang="scss">
+@import "assets/scss/common/global.scss";
 </style>
