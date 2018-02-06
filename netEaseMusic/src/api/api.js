@@ -7,6 +7,6 @@ export default {
      */
     login(params) {
       var url = "/login/cellphone";
-      return post(url, params);
+      return get(url, params);
     },
   }

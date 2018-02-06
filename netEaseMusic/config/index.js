@@ -10,17 +10,15 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    // 配置代理
+    // // 配置代理
     proxyTable: {
-      '/': {
-          target: 'http://localhost:3000/',
-          //target: 'http://192.168.0.51:8088/restful/',
-
-          changeOrigin: true,
-          pathRewrite: {
-              '^/': ''
-          }
-      }
+      // '/api/**': {
+      //     target: 'http://localhost:3000',
+      //     changeOrigin: true,
+      //     pathRewrite: {
+      //         '^/api': '/'
+      //     }
+      // }
     },
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
