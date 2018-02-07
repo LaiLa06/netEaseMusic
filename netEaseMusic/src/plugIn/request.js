@@ -44,7 +44,35 @@ export function post (url, params) {
              .then(res => (res.data)).catch((error) => {console.log(error)});
 }
 
+// function checkCode(res) {
+//   if (res.data.code === -500) {
+//       window.location.href = '/backend'
+//   } else if (res.data.code === -400) {
+//       window.location.href = '/'
+//   } else if (res.data.code !== 200) {
+//       store.dispatch('global/showMsg', res.data.message)
+//   }
+//   function checkStatus(response) {
+//     store.dispatch('global/gProgress', 100)
+//     if (response.status === 200 || response.status === 304) {
+//         return response
+//     }
+//     return {
+//         data: {
+//             code: -404,
+//             message: response.statusText,
+//             data: ''
+//         }
+//     }
+// }
+
 export function get (url, params) {
-  return axios.get(url, params)
-      .then(res => res.data).catch((error) => {});
+  return axios({
+    method: 'get',
+    url: url,
+    params,
+    }).then(res => res.data).catch((error) => {});
+
+    //  return axios.get(url, params)
+    //   .then(res => res.data).catch((error) => {});
 }

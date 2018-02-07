@@ -1,34 +1,36 @@
 <template>
-  <div class="hello">
-    <h1>测试{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-      <br>
-      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+  <div class="index">
+    <HeaderTop></HeaderTop>
+    <div class="modular-list">
+      <ul>
+        <li><i class="icon iconfont icon-cebianlan"></i>本地音乐(2)</li>
+        <li><i class="icon iconfont icon-cebianlan"></i>最近播放(100)</li>
+        <li><i class="icon iconfont icon-cebianlan"></i>下载管理(1)</li>
+        <li><i class="icon iconfont icon-cebianlan"></i>我的电台(4)</li>
+        <li><i class="icon iconfont icon-cebianlan"></i>我的收藏(4)</li>
+      </ul>
+    </div>
+    <div class="c-sheet">
+      <header>创建的歌单（16）</header>
+    </div>
+    <div class="s-sheet">
+      <header>收藏的歌单（12）</header>
+    </div>
   </div>
 </template>
 
 <script>
-// import Vue from 'Vue';
-// import Lib from './assets/js/Lib';
+/* eslint-disable*/
+  import Lib from '@/assets/js/Lib';
+  import HeaderTop from '@/components/Header.vue';
 export default {
-  name: 'HelloWorld',
+  name: 'index',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },components:{
+    HeaderTop
   }
 }
 </script>

@@ -3,7 +3,7 @@
      <div class="avator"><img src="@/assets/images/logo.png" alt=""></div>
      <div class="form-wrap">
         <input type="text" maxlength="11" v-model="cellphone" placeholder="请输入您的手机号">
-        <input type="text" v-model="password" placeholder="请输入密码">
+        <input type="password" v-model="password" placeholder="请输入密码">
         <button class="btn-commit" @click="login">登录</button>
      </div>
   </div>
@@ -19,15 +19,17 @@ export default {
     return {
       cellphone: '',
       password:'',
-      uid:''
+      id:''
     }
   },
   methods: {  
     login(){
+      console.log(typeof(this.password))
       let params={phone:this.cellphone,password:this.password}    
       api.login(params).then(res=>{
-         console.log(res.account);
-        // this.$router.push({path:'/relay/relayState',query:{uid:this.uid}});
+        console.log(res.account);
+        this.id=res.account.id;
+        this.$router.push({path:'/index',query:{id:this.id}});
       }).catch((error) => {
         alert(error)
       });
