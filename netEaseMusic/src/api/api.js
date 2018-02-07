@@ -9,4 +9,18 @@ export default {
       var url = "/login/cellphone";
       return get(url, params);
     },
+     /**
+     ** 获取用户信息
+     */
+    getUserDetail(params) {
+      var url = "/user/subcount";
+      return get(url, params);
+    },
+    /**
+     ** 获取用户歌单
+     */
+    getPlaylist(params) {
+      var url = "/user/playlist";
+      return get(url, params);
+    },
   }

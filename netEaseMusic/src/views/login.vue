@@ -24,12 +24,10 @@ export default {
   },
   methods: {  
     login(){
-      console.log(typeof(this.password))
       let params={phone:this.cellphone,password:this.password}    
       api.login(params).then(res=>{
-        console.log(res.account);
         this.id=res.account.id;
-        this.$router.push({path:'/index',query:{id:this.id}});
+        this.$router.push({path:'/myMusic',query:{id:this.id}});
       }).catch((error) => {
         alert(error)
       });

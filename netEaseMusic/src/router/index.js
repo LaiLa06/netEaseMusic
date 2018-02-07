@@ -10,9 +10,9 @@ const routes = [{
     name:'login',
     component: resolve => require(['@/views/login'], resolve)
    },{
-        path: '/index',
-        name:'index',
-        component: resolve => require(['@/views/index'], resolve)
+        path: '/myMusic',
+        name:'myMusic',
+        component: resolve => require(['@/views/myMusic'], resolve)
     }]
 
 const router = new Router({

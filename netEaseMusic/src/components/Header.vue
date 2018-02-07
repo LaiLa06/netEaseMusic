@@ -16,7 +16,6 @@ export default {
   name: 'Header',
   data () {
     return {
-
     }
   }
 }
@@ -25,8 +24,8 @@ export default {
 <style scoped lang="scss">
 @import "../assets/scss/common/var.scss";
   .header-wrap{
-    position: relative;height:1.4rem;background-color:$deepRed;
-    i{font-size:0.6rem;color:#fff;}
+    position: relative;height:1.4rem;background-color:$red;
+    i{font-size:0.6rem;color:$white;}
     .slide{
       @extend %topLeft;@include square(1.4rem);
     }
